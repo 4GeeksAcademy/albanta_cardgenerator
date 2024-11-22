@@ -11,24 +11,16 @@
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
-    <script src="your-script.js" defer></script>
-    <!-- Asegúrate de que el script esté vinculado correctamente -->
+    <script src="./scripts/your-script.js" defer></script>
   </head>
   <body>
     <div class="container-fluid text-center">
       <h1 class="mt-5">Hello Rigo!</h1>
       <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <button id="generate">Play cards</button>
-      <div class="container">
-        <div class="card" id="cardResult">
-          <div id="symbol1">♠</div>
-          <div id="value">A</div>
-          <div id="symbol2">♥</div>
-        </div>
+
+      <div class="container-fluid text-center">
+        <h2 class="mt-5">MI BOTON</h2>
+        <button id="generate" onclick="playCards()">Play cards</button>
       </div>
       <div class="card">
         <span id="symbol1"></span>
@@ -37,13 +29,9 @@
       </div>
 
       <div class="fixed-bottom p-4">
-        Made with ❤️ by
+        Made with ❤️
         <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
       </div>
     </div>
-
-    <script>
-      document.getElementById("generate").addEventListener("click", playCards);
-    </script>
   </body>
 </html>

@@ -28,13 +28,9 @@ window.onload = function() {
     return list[item];
   };
 
-  const getRandomSymbol = () => {
-    return getRandomizer(symbolList);
-  };
+  const getRandomSymbol = () => getRandomizer(symbolList);
 
-  const getRandomValue = () => {
-    return getRandomizer(valueList);
-  };
+  const getRandomValue = () => getRandomizer(valueList);
 
   const seterizer = (selector, value) => {
     document.querySelector(selector).innerHTML = value;
@@ -48,15 +44,12 @@ window.onload = function() {
     seterizer("#value", value);
   };
 
-  const playCards = () => {
+  window.playCards = () => {
     const symbol = getRandomSymbol();
     const value = getRandomValue();
     setSymbolValue(symbol, "#symbol1");
     setSymbolValue(symbol, "#symbol2");
     setValueValue(value);
+    console.log("Play cards button clicked!");
   };
-
-  document.getElementById("generate").addEventListener("click", playCards);
-
-  playCards();
 };
